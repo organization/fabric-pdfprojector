@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fabric-pdfprojector",
+  "version": "${version}",
+  "name": "fabric-pdfprojector",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/fabric-pdfprojector/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.mocha.pdfprojector.client.PdfProjectorModClient"
+    ],
+    "main": [
+      "me.mocha.pdfprojector.PdfProjectorMod"
+    ]
+  },
+  "mixins": [
+    "fabric-pdfprojector.mixins.json",
+    {
+      "config": "fabric-pdfprojector.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
